@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap');
+.header {
+    height: 100vh; /* Visina cijelog preglednika */
+    margin: 0; /* Uklonite marginu za pun ekran */
+    background: url('/he.gif') no-repeat center center;
+    background-size: cover; /* Ispunjava cijeli div */
+    position: relative;
+    border-radius: 20px;
+}
+
+.header-contents{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color:white;
+    font-size: max(4.5vw,22px);
+    font-family: Playwrite España Decorativa ;
+}
+.header-contents p{
+    color:white;
+    font-size: 1vw;
+}
+.header-contents button{
+    border: none;
+    color:white;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color:pink;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+@media (max-width:1050px) {
+   
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media (max-width:750px) {
+
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding:2vw 4vw ;
+    }
+}
